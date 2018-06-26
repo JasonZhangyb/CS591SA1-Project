@@ -1,0 +1,27 @@
+
+<form class="form-wrapper cf">
+  <input type="text" placeholder="input image url..." id="image_url" required>
+  <button type="reset" (click)="searchCelebs('image_url')">Search</button>
+</form>
+
+<div class="celeb-grid">
+  <div *ngFor="let celeb of celebs" class="celeb-card">
+    <div class="celeb-container">
+      <h4><b (click)="searchMovies(celeb.name)">{{celeb.name}} {{celeb.prob}}</b> </h4>
+      <button (click)="searchMovies(celeb.name)">Search</button>
+    </div>
+    <p></p>
+  </div>
+</div>
+
+<p></p>
+
+<div class="movie-grid">
+  <div *ngFor="let movie of movies" class="movie-card">
+    <img src="{{ movie.poster }}" style="width:100%">
+    <div class="movie-container">
+      <h4><b>Title: {{ movie.title }}</b></h4>
+      <p>Rating: {{ movie.rating }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+{
+  "/Movie/*":{
+    "target":"http://localhost:3000",
+    "secure":false,
+    "logLevel":"debug"
+  },
+
+  "/Celebrity/*":{
+    "target":"http://localhost:3000",
+    "secure":false,
+    "logLevel":"debug"
+  },
+
+  "/twitter/*":{
+    "target":"http://localhost:3000/auth",
+    "secure":false,
+    "logLevel":"debug"
+  },
+
+  "/check/*":{
+    "target":"http://localhost:3000",
+    "secure":false,
+    "logLevel":"debug"
+  },
+
+  "/logout/*":{
+    "target":"http://localhost:3000/auth",
+    "secure":false,
+    "logLevel":"debug"
+  }
+}
