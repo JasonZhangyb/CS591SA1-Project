@@ -112,6 +112,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,13 +144,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="8.10.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MovieSearch" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Angular-MovieSearch" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.selected.package.prettier" value="" />
@@ -191,11 +191,12 @@
       <workItem from="1530043789678" duration="667000" />
       <workItem from="1530048516525" duration="1227000" />
       <workItem from="1530052671243" duration="136000" />
+      <workItem from="1530055012341" duration="183000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16572000" />
+    <option name="totallyTimeSpent" value="16755000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="24" width="1292" height="702" extended-state="6" />
