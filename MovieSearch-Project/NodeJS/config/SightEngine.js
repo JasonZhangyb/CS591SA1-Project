@@ -1,6 +1,6 @@
 const SightEngine = {
-    API_USER: '1282660239',
-    API_KEY: 'Z7z5dJLGR9zpko4DZezA'
+    API_USER: 'placeholder',
+    API_KEY: 'placeholder'
 }
 
 module.exports = SightEngine;
