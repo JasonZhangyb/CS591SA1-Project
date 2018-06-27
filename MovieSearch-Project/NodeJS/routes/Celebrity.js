@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const SE = require('../config/SightEngine');
 
-//POST
+//POST -- recognize celebrity from image url
 router.post('/', function (req, res) {
     let image = req.body.url;
     var sightengine = require('sightengine')(SE.API_USER, SE.API_KEY);

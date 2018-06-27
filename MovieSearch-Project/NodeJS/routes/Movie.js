@@ -2,12 +2,11 @@ var express = require('express');
 var router = express.Router();
 var request = require('request');
 
-const authorized = require('./authCheck');
-
 const TMDb = require('../config/TMDb')
 
 const TMDb_model = require('../models/MovieSearch');
 
+// POST
 router.post('/', function (req, res) {
     var celeb = req.body.name;
 
@@ -54,6 +53,28 @@ router.post('/', function (req, res) {
                 res.json({name: result.name, ID: result.ID, known_for: result.known_for});}
         })
     })
-})
+});
+
+// GET -- get all celebrities from database
+router.get('/', function (req, res) {
+    TMDb_model.find({}, function (err, results) {
+      res.json(results);
+    })
+});
+
+// DELETE -- remove celebrity from database (require auth)
+router.delete('/:id', function(req, res, next){
+    let celeb_id = req.params.id;
+    TMDb_model.findOne({ID: celeb_id}, function (err, result) {
+        if (result == null){
+            res.json({message: 'Celebrity not found.'});
+        }
+        else {
+            TMDb_model.findOneAndRemove({ID: celeb_id}, function (err, result) {
+                res.json({message: 'the celebrity is successfully deleted.'});
+            })
+        }
+    })
+});
 
 module.exports = router;
