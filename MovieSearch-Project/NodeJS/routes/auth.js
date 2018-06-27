@@ -38,21 +38,12 @@ passport.use(new Strategy(passportOption,
 )
 
 passport.serializeUser(function (user, callback) {
-    //console.log('in serialize, setting id on session:', user.id)
-    //done(null, user.id)
     callback(null, user);
 })
 
 passport.deserializeUser(function (obj, callback) {
-    //console.log('in deserialize with id', id)
-    //User.findOne({twitterID: id}, function (err, user) {
-    //done(err, user)
     callback(null, obj);
 })
-
-//router.get('/success', function (req, res) {
-//  res.redirect('/');
-//})
 
 router.get('/logout', function (req, res, next) {
     User.findOne({userID: req.user.userID})
