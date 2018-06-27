@@ -62,7 +62,7 @@ router.get('/', function (req, res) {
     })
 });
 
-// DELETE -- remove celebrity from database (require auth)
+// DELETE -- remove celebrity from database
 router.delete('/:id', function(req, res, next){
     let celeb_id = req.params.id;
     TMDb_model.findOne({ID: celeb_id}, function (err, result) {
