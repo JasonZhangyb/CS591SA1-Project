@@ -1,5 +1,5 @@
 const TMDb = {
-    API_KEY: '1e4142699b36c4e63c694e770ecccc72'
+    API_KEY: 'placeholder'
 }
 
 module.exports = TMDb;
