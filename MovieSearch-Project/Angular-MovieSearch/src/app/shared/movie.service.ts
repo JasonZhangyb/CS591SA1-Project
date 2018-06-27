@@ -1,7 +1,7 @@
 import { Injectable} from '@angular/core';
 import {Http, URLSearchParams} from '@angular/http';
 import {map} from 'rxjs/internal/operators';
-// import {get} from 'http';
+
 
 @Injectable()
 export class MovieService {
