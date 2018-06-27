@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../shared/movie.service';
-// import {error} from 'selenium-webdriver';
+
 
 @Component({
   selector: 'app-movie-list',
